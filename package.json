@@ -1,0 +1,38 @@
+{
+  "name": "soft-require",
+  "version": "1.0.0",
+  "description": "Checks to see if npm is installed and loads it, if not it throws a catchable error.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
+    "validate": "npm ls",
+    "test": "./node_modules/.bin/mocha ./tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holmok/soft-require.git"
+  },
+  "keywords": [
+    "npm",
+    "require"
+  ],
+  "author": "Christopher Holmok <christopher@holmok.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/holmok/soft-require/issues"
+  },
+  "homepage": "https://github.com/holmok/soft-require#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.1.0",
+    "precommit-hook": "^3.0.0"
+  },
+  "pre-commit": [
+    "lint",
+    "validate",
+    "test"
+  ]
+}
